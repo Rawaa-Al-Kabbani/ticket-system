@@ -1,41 +1,6 @@
-# Building the backend `GraphQL` api for Ticket system
+# Ticket system
 
-A simple support ticket system. In this exercise, a `ticket` is defined as a task that has a `title`. The ticket is either `completed` or `incomplete` at any given time. It has a recursive structure, meaning that it may have `children` tickets. Those children tickets may further have children tickets of their own, and so on. For example:
-
-
-```json5
-{
-  "title": "first ticket",
-  "isCompleted": false,
-  "children": [
-    {
-      "title": "second ticket",
-      "isCompleted": true,
-      "children": []
-    },
-    {
-      "title": "third ticket",
-      "isCompleted": false,
-      "children": [
-        {
-          "title": "fourth ticket",
-          "isCompleted": true,
-          "children": [///...]
-        }
-      ]
-    }
-  ]
-}
-```
-
-## Technical Notes
-
-- The server is running with [nodemon](https://nodemon.io/), which will automatically restart for you when you modify and save a file.
-- The database provider is [SQLite](https://www.sqlite.org/), which will store data in a local file called `database.sqlite3`.
-- The database client is [Sequelize](https://sequelize.org/). For any database operation, you should only have to interact with `Sequelize`.
-- You will be implementing a [GraphQL](https://graphql.org/) server. We have set up [Apollo Express Server](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-express) and [GraphQL Playground](https://github.com/prisma/graphql-playground) for you.
-
-
+A ticket API written in Node.js, GraphQL, and SQLite
 
 # How to run the service and the tests
 
